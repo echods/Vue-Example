@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testing Vue</title>
+</head>
+<body>
+
+<div id="app">
+    <h1>Testing Vue with x templates</h1>
+
+    <hello-world></hello-world>
+
+    <hr>
+
+    <second-test></second-test>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="components.js"></script>
+
+<!-- All Templates for components down here -->
+<script type="text/x-template" id="hello-world-template">
+    <div>
+        <p>Reactive: {{ inputTesting }}</p>
+        <input v-model="inputTesting" type="text" placeholder="Type in me">
+    </div>
+</script>
+
+<!-- Template #2 -->
+<script type="text/x-template" id="second-test-template">
+    <div>
+        <p>{{ domData }}</p>
+        <p>
+            <button @click.stop.prevent="putInDom">Push Me</button>
+        </p>
+    </div>
+</script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
